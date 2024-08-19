@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import Board from "./components/Board";
+import "./App.css";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
+import PdfMerger from "./components/pdf/PdfMerger";
+import Navigation from "./components/Navigation";
+import PdfConverter from "./components/pdf/PdfConverter";
+import PdfSplitter from "./components/pdf/PdfSplitter";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="body">
+        <Navigation />
+        <Routes>
+          <Route path="/" element={<Board />} />
+          <Route path="/pdf-merger" element={<PdfMerger />} />
+          <Route path="/pdf-converter" element={<PdfConverter />} />
+          <Route path="/pdf-splitter" element={<PdfSplitter />} />
+        </Routes>
+      </div>
+    </BrowserRouter>
   );
 }
 
 export default App;
+
+//1. I will make 50 X 50 board.
