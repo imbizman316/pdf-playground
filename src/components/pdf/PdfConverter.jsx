@@ -57,10 +57,17 @@ function PdfConverter() {
   };
 
   return (
-    <div>
-      <h1>PDF Converter</h1>
-      <input type="file" multiple onChange={handleFileChange} />
-      <button onClick={convertToPdf}>Convert to PDF</button>
+    <div className="app-container">
+      <h1 className="title">PDF Converter</h1>
+      <input
+        className="input-container"
+        type="file"
+        multiple
+        onChange={handleFileChange}
+      />
+      <button className="button-container" onClick={convertToPdf}>
+        Convert to PDF
+      </button>
       {pdfUrl && (
         <div>
           <h2>Converted PDF</h2>

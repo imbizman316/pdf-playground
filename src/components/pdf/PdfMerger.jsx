@@ -1,5 +1,6 @@
 import { PDFDocument } from "pdf-lib";
 import React, { useState } from "react";
+import { useLocation, useParams } from "react-router-dom";
 
 export default function PdfMerger() {
   const [files, setFiles] = useState([]);
@@ -33,10 +34,17 @@ export default function PdfMerger() {
   };
 
   return (
-    <div>
-      <h1>PDF Merger</h1>
-      <input type="file" multiple onChange={handleFileChange} />
-      <button onClick={mergePdfs}>Merge PDFs</button>
+    <div className="app-container">
+      <h1 className="title">PDF Merger</h1>
+      <input
+        className="input-container"
+        type="file"
+        multiple
+        onChange={handleFileChange}
+      />
+      <button className="button-container" onClick={mergePdfs}>
+        Merge PDFs
+      </button>
       {mergedPdfUrl && (
         <div>
           <h2>Merged PDF</h2>
@@ -51,6 +59,12 @@ export default function PdfMerger() {
           ></iframe>
         </div>
       )}
+      <div>
+        <h5>1. Press the select file button</h5>
+        <h5>2. Select multiple files you want to merge</h5>
+        <h5>3. Press the merge PDFs button</h5>
+        <h5>4. Press the download merged PDF button to download.</h5>
+      </div>
     </div>
   );
 }

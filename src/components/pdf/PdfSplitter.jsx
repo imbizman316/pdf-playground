@@ -41,10 +41,15 @@ function PdfSplitter() {
   };
 
   return (
-    <div>
-      <h1>PDF Separator</h1>
-      <input type="file" accept="application/pdf" onChange={handleFileChange} />
-      <div>
+    <div className="app-container">
+      <h1 className="title">PDF Separator</h1>
+      <input
+        className="input-container"
+        type="file"
+        accept="application/pdf"
+        onChange={handleFileChange}
+      />
+      <div className="page-select">
         <label>
           Start Page:
           <input
@@ -64,7 +69,9 @@ function PdfSplitter() {
           />
         </label>
       </div>
-      <button onClick={separatedPdf}>Separate PDF</button>
+      <button className="button-container" onClick={separatedPdf}>
+        Separate PDF
+      </button>
       {separatedPdfUrl && (
         <div>
           <h2>Separated PDF</h2>
