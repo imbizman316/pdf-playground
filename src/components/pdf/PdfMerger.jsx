@@ -59,7 +59,7 @@ export default function PdfMerger() {
           ></iframe>
         </div>
       )}
-      <div>
+      <div className="instruction">
         <h5>1. Press the select file button</h5>
         <h5>2. Select multiple files you want to merge</h5>
         <h5>3. Press the merge PDFs button</h5>

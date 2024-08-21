@@ -82,6 +82,13 @@ function PdfConverter() {
           ></iframe>
         </div>
       )}
+
+      <div className="instruction">
+        <h5>1. Press the select file button</h5>
+        <h5>2. Select a file you want to convert</h5>
+        <h5>3. Press the convert to PDF button</h5>
+        <h5>4. Press the download converted PDF button to download.</h5>
+      </div>
     </div>
   );
 }

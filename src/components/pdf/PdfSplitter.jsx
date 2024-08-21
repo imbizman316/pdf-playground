@@ -86,6 +86,12 @@ function PdfSplitter() {
           ></iframe>
         </div>
       )}
+      <div className="instruction">
+        <h5>1. Press the select file button</h5>
+        <h5>2. Set start page and end page.</h5>
+        <h5>3. Press the separate PDF button</h5>
+        <h5>4. Press the download splitted PDF button to download.</h5>
+      </div>
     </div>
   );
 }
